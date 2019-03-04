@@ -1,65 +1,27 @@
 # endline README
 
-This is the README for your extension "endline". After writing up a brief description, we recommend including the following sections.
+Insert punctuation (semicolon) at the end of the current line and optionally go to the end or start a new line.
+
+To activate, open the package panel thing and start typing "end line"
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+* If the current line already has a semicolon, it doesn't add another one, but still moves the cursor to the end of the line or the newly created next line, depending on the action triggered.
+* Trims the end of the current line of white space before inserting the semicolon.
 
-For example if there is an image subfolder under your extension project workspace:
+## Keyboard shortcuts
 
-\!\[feature X\]\(images/feature-x.png\)
+The endline extension includes three keyboard shortcuts:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+* <kbd>cmd</kbd> + <kbd>;</kbd>: insert semicolon at end of line, but keep the cursor where it is.
+* <kbd>ctrl</kbd> + <kbd>;</kbd>: insert semicolon at end of line and move cursor to the end of the line.
+* <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>enter</kbd>: insert semicolon at end of line, create a new line after the current one, and move cursor to the start of the new line.
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+None so far.
 
-## Release Notes
+## To Do
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+* At some point, I'd like determine if the current line is inside a JavaScript array or object, and, if so, insert a comma instead of a semicolon. (Will probably need to use https://github.com/Microsoft/vscode-textmate)
