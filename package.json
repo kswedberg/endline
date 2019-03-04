@@ -1,8 +1,8 @@
 {
   "name": "endline",
   "displayName": "endline punctuation",
-  "description": "insert punctuation at end of line",
-  "version": "0.0.1",
+  "description": "Visual Studio Code extension to insert punctuation at end of line",
+  "version": "1.0.0",
   "publisher": "kswedberg",
   "engines": {
     "vscode": "^1.31.0"
