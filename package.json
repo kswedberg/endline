@@ -1,35 +1,65 @@
 {
   "name": "endline",
-  "displayName": "endline",
+  "displayName": "endline punctuation",
   "description": "insert punctuation at end of line",
   "version": "0.0.1",
-  "engines":
-  {
+  "publisher": "kswedberg",
+  "engines": {
     "vscode": "^1.31.0"
   },
-  "categories": ["Other"],
-  "activationEvents": ["onCommand:extension.helloWorld"],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:endline.stay",
+    "onCommand:endline.end",
+    "onCommand:endline.new"
+  ],
   "main": "./extension.js",
-  "contributes":
-  {
+  "contributes": {
     "commands": [
       {
-        "command": "extension.endline",
-        "title": "End line with punctuation"
+        "command": "endline.stay",
+        "title": "Insert punctuation at end of line, not moving cursor",
+        "category": "End Line"
       },
       {
-        "command": "extension.newline",
-        "title": "End line with punctuation and go to new line"
+        "command": "endline.end",
+        "title": "Insert semicolon at end of line, and place cursor after it",
+        "category": "End Line"
+      },
+      {
+        "command": "endline.new",
+        "title": "Insert semicolon at end of line, create new line, and move cursor to it",
+        "category": "End Line"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "endline.stay",
+        "key": "cmd+;",
+        "mac": "cmd+;",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "endline.end",
+        "key": "ctrl+;",
+        "mac": "ctrl+;",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "endline.new",
+        "key": "shift+ctrl+enter",
+        "mac": "shift+cmd+enter",
+        "when": "editorTextFocus"
       }
     ]
   },
-  "scripts":
-  {
+  "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
-  "devDependencies":
-  {
+  "devDependencies": {
     "eslint": "^5.13.0",
     "eslint-config-kswedberg": "^3.0.0",
     "vscode": "^1.1.28"
