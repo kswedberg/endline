@@ -64,9 +64,9 @@
     "test": "node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
-    "eslint-config-kswedberg": "^3.0.0",
-    "vscode": "^1.1.28"
+    "eslint": "^7.14.0",
+    "eslint-config-kswedberg": "^4.1.1",
+    "vscode": "^1.1.37"
   },
   "license": "MIT"
 }
